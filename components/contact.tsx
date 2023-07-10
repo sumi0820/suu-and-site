@@ -25,8 +25,8 @@ const Contact = () => {
   });}, [ref]);
 
  return (
-  <section className='flex gap-[7.5rem] mx-auto w-full h-[38rem] items-center justify-center' id="contact" ref={ref}>
-    <div className='flex flex-col gap-16 max-w-[35.5rem]'>
+  <section className='flex flex-col-reverse gap-8 lg:gap-[7.5rem] mx-auto w-full h-full lg:h-[38rem] items-center justify-center lg:flex-row pb-14' id="contact" ref={ref}>
+    <div className='flex flex-col gap-8 lg:gap-16 max-w-[35.5rem]'>
      <p className='header-text'>Say hi to us</p>
      <div className='flex flex-col gap-8'>
       <p className='base-text'>We specialize in website and app development, providing support for business expansion into Asian countries, including Japan, as well as engaging in trade activities.</p>
@@ -36,7 +36,7 @@ const Contact = () => {
     <img
     src="/assets/contact-image.png"
     alt="Contact"
-    className='w-[462px] h-[308px]'
+    className='w-full object-contain lg:w-[462px] lg:h-[308px]'
   />
   </section>
  );
