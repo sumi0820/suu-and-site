@@ -5,11 +5,6 @@ const Meta = () => {
   return (
     <Head>
       <link
-        rel="apple-touch-icon"
-        sizes="180x180"
-        href="/favicon/apple-touch-icon.png"
-      />
-      <link
         rel="icon"
         type="image/png"
         sizes="32x32"
@@ -22,11 +17,16 @@ const Meta = () => {
         href="/favicon/favicon-16x16.png"
       />
       <link rel="shortcut icon" href="/favicon/favicon.ico" />
+
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta property="og:title" content={`${CMS_NAME}`} />
       <meta
         name="description"
-        content={`${CMS_NAME}`}
+        content={`We are ${CMS_NAME}, a digital creation firm that provides support from UI/UX design to implementation for websites and applications.`}
       />
-      <meta property="og:image" content={'/assets/company-logo.svg'} />
+      <meta property="og:url" content={'/'} />
+      <meta property="og:site_name" content={`${CMS_NAME}`} />
+      <meta property="og:image" content={`https://${process.env.NEXT_DOMAIN}/favicon/ogp.png`} />
     </Head>
   )
 }
